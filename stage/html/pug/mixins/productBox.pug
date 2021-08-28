@@ -1,0 +1,20 @@
+//-product box mixin
+mixin productBox(products)
+    - if (pageTitle == 'Clothes') 
+        - var kind = 'clothes'
+    
+    - if (pageTitle == 'Footwear') 
+        - var kind = 'footwear'
+    
+    - if (pageTitle == 'Accessories') 
+        - var kind = 'accessories'
+    .row 
+        each product in products 
+            .col-lg-4.col-6.mb-4.text-center
+                .productBox.h-100
+                    .image-box
+                        img.w-100(src=`img/${kind}/${product.short + product.image.first}.jpg`)
+                    .text.pb-3
+                        h5.m-0= product.title
+                        p.my-2 Product Code: #{product.code}
+                        span $#{product.price}

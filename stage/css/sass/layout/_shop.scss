@@ -1,0 +1,58 @@
+.shop {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+  }
+  .row,
+  .col {
+    @include media-breakpoint-down(md) {
+      margin-top: 0 !important;
+    }
+  }
+  h2 {
+    @extend %secHeader;
+  }
+  h3 {
+    @extend %mainHeader;
+    margin-top: -15px;
+  }
+  span {
+    @extend %paragraph;
+  }
+  a {
+    @extend %button;
+  }
+  .first {
+    @include media-breakpoint-down(md) {
+      order: 0 !important;
+    }
+  }
+  .image {
+    background-color: $bgColor;
+    position: relative;
+    overflow: hidden;
+    z-index: -3;
+    height: 573px;
+    display: flex;
+    &:after {
+      content: '';
+      position: absolute;
+      background-size: 120% 130%;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      left: -20px;
+      z-index: -1;
+      opacity: 0.15;
+    }
+    &.clothes:after {
+      background-image: url(../img/homepage/shop/clothes.png);
+    }
+    &.footwear:after {
+      background-image: url(../img/homepage/shop/footwear.png);
+    }
+    &.accessories:after {
+      background-image: url(../img/homepage/shop/accessories.png);
+    }
+  }
+}

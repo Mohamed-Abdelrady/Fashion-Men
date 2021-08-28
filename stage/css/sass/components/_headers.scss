@@ -1,0 +1,25 @@
+%mainHeader {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $mainHeaderColor;
+  margin: 0;
+}
+%secHeader {
+  font-size: 3.6rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: $secHeaderColor;
+  margin: 0;
+}
+%productHeader {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $mainHeaderColor;
+}
+%paragraph {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: $pColor;
+}

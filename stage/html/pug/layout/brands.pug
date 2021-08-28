@@ -1,0 +1,7 @@
+.brands.text-center
+    .container 
+        h2 Trending Brands
+        .image.row.align-items-center.g-sm-5.g-4
+            each brand in brands
+                .col-md.col-4
+                    img.w-100(src=brand.link)

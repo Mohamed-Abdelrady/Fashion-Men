@@ -1,0 +1,67 @@
+link(rel="stylesheet", href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+.sideBar
+    ul.list-unstyled.m-0
+        li
+            form.form-inline
+                .input-group
+                    input.form-control.bg-transparent.border-0.p-0(type='text' placeholder='Search Products ...' aria-label='SEARCH..')
+                    .input-group-prepend
+                        .input-group-text#btnGroupAddon2.bg-transparent.border-0
+                            i.fas.fa-search
+        li
+            h5 Product Categories
+            +sideBar(categories[pageTitle.toLowerCase()])
+        li 
+            h5 Filter By Price
+            .price-slider
+                #slider-range
+            .desc
+                p Price: 
+                    span#min-price $0
+                    |  - 
+                    span#max-price $320
+                a.mx-auto(href='#') Filter
+        li 
+            h5 Top Rated Products
+            - if (pageTitle == 'Clothes') 
+                .product.row.g-2
+                    .text.col
+                        h6= clothes.sec.title
+                        span $#{clothes.sec.price}
+                    .col-4
+                        img.w-100(src=`img/clothes/${clothes.sec.short + clothes.sec.image.first}.jpg`)
+                .product.row.g-2
+                    .text.col
+                        h6= clothes.sixth.title
+                        span $#{clothes.sixth.price}
+                    .col-4 
+                        img.w-100(src=`img/clothes/${clothes.sixth.short + clothes.sixth.image.first}.jpg`)
+            - if (pageTitle == 'Footwear') 
+                .product.row.g-2
+                    .text.col
+                        h6= footwears.sec.title
+                        span $#{footwears.sec.price}
+                    .col-4 
+                        img.w-100(src=`img/footwear/${footwears.sec.short + footwears.sec.image.first}.jpg`)
+                .product.row.g-2
+                    .text.col
+                        h6= footwears.sixth.title
+                        span $#{footwears.sixth.price}
+                    .col-4 
+                        img.w-100(src=`img/footwear/${footwears.sixth.short + footwears.sixth.image.first}.jpg`)
+            - if (pageTitle == 'Accessories') 
+                .product.row.g-2
+                    .text.col
+                        h6= accessories.sec.title
+                        span $#{accessories.sec.price}
+                    .col-4 
+                        img.w-100(src=`img/accessories/${accessories.sec.short + accessories.sec.image.first}.jpg`)
+                .product.row.g-2
+                    .text.col
+                        h6= accessories.fourth.title
+                        span $#{accessories.fourth.price}
+                    .col-4 
+                        img.w-100(src=`img/accessories/${accessories.fourth.short + accessories.fourth.image.first}.jpg`)
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js")
+script(src="js/libs/sidebar.js")

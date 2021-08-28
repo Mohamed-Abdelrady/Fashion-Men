@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes</title>
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs/all.min.css">
+    <link rel="stylesheet" href="css/clothes.css">
+  </head>
+  <body>
+    <nav class="navbar-up container"><a class="nav-logo" href="index.html"><span>D</span>euce</a>
+      <div class="nav-parent">
+        <ul class="nav-menu list-unstyled text-uppercase">
+          <li class="nav-item active"><a class="nav-link" href="clothes.html">Clothes</a></li>
+          <li class="nav-item"><a class="nav-link" href="footwear.html">Footwear</a></li>
+          <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="bag ms-lg-5 ms-auto"><i class="fas fa-shopping-bag"></i></div>
+      <div class="bars ms-4"><span class="bar"></span><span class="bar"></span><span class="bar">                       </span></div>
+    </nav>
+    <div class="headLine">
+      <div class="slider">
+        <div class="carousel slide" id="carouselExampleSlidesOnly" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="image w-100 d-block" style="background-image: url(img/slider/clothes/1.jpg)"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="image w-100 d-block" style="background-image: url(img/slider/clothes/2.jpg)"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="image w-100 d-block" style="background-image: url(img/slider/clothes/3.jpg)"></div>
+            </div>
+          </div>
+        </div>
+        <p class="display-1">Clothes</p>
+      </div>
+    </div>
+    <div class="content container-lg-fluid container">
+      <div class="row"> 
+        <div class="col-md-3 col-3 d-lg-block d-none">
+          <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+          <div class="sideBar">
+            <ul class="list-unstyled m-0">
+              <li>
+                <form class="form-inline">
+                  <div class="input-group">
+                    <input class="form-control bg-transparent border-0 p-0" type="text" placeholder="Search Products ..." aria-label="SEARCH..">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text bg-transparent border-0" id="btnGroupAddon2"><i class="fas fa-search"></i></div>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li>
+                <h5>Product Categories</h5>
+                <ul class="category list-unstyled">
+                  <li>T-Shirts<span>(75)</span></li>
+                  <li>Shirts<span>(32)</span></li>
+                  <li>Jackets<span>(27)</span></li>
+                  <li>Jeans<span>(64)</span></li>
+                  <li>Sweatshirts<span>(39)</span></li>
+                  <li>Shorts<span>(46)</span></li>
+                </ul>
+              </li>
+              <li> 
+                <h5>Filter By Price</h5>
+                <div class="price-slider">
+                  <div id="slider-range"></div>
+                </div>
+                <div class="desc">
+                  <p>Price: <span id="min-price">$0</span> - <span id="max-price">$320</span></p><a class="mx-auto" href="#">Filter</a>
+                </div>
+              </li>
+              <li> 
+                <h5>Top Rated Products</h5>
+                <div class="product row g-2">
+                  <div class="text col">
+                    <h6>Stripe Detailed T-Shirt</h6><span>$43</span>
+                  </div>
+                  <div class="col-4"><img class="w-100" src="img/clothes/SD1.jpg"></div>
+                </div>
+                <div class="product row g-2">
+                  <div class="text col">
+                    <h6>Carrot Fit Jeans</h6><span>$56</span>
+                  </div>
+                  <div class="col-4"> <img class="w-100" src="img/clothes/CJ1.jpg"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+          <script src="js/libs/sidebar.js"></script>
+        </div>
+        <div class="col">
+          <div class="row"> 
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/LA1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Los Angeles Clippers T-Shirt</h5>
+                  <p class="my-2">Product Code: GI6J4EGLP3</p><span>$49</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/SD1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Stripe Detailed T-Shirt</h5>
+                  <p class="my-2">Product Code: 8ELQWZ68RE</p><span>$43</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/OZ1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Long Sleeve Oversize Shirt</h5>
+                  <p class="my-2">Product Code: C79K549G8A</p><span>$57</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/LJ1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Long Sleeve Lumberjack Shirt</h5>
+                  <p class="my-2">Product Code: 2H5QHKSVLM</p><span>$53</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/UK1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Ultra Skinny Fit Jeans</h5>
+                  <p class="my-2">Product Code: L2X8BOWJHE</p><span>$58</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/CJ1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Carrot Fit Jeans</h5>
+                  <p class="my-2">Product Code: JBQWTSDWX5</p><span>$56</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/CB1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Regular Fit Basic Bermuda</h5>
+                  <p class="my-2">Product Code: TFE79R7KI6</p><span>$39</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-6 mb-4 text-center">
+              <div class="productBox h-100">
+                <div class="image-box"><img class="w-100" src="img/clothes/MD1.jpg"/></div>
+                <div class="text pb-3">
+                  <h5 class="m-0">Slim Fit Mesh Shorts</h5>
+                  <p class="my-2">Product Code: L4QZ8FTC9H</p><span>$37</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="subscripe text-center">
+          <h2 class="mb-4">Subscripe To Newsletter </h2>
+          <p class="mb-4 w-75 mx-auto">Subscribe to newsletter to be the first who receive latest news about sales, promotions and products.</p>
+          <div class="input-group justify-content-center mx-auto d-sm-flex d-block">
+            <input type="text" placeholder="Enter your e-mail here">
+            <button class="text-uppercase">Subscribe</button>
+          </div>
+        </div>
+        <div class="border-footer"></div>
+      </div>
+      <div class="bottom row g-0 align-items-center">
+        <div class="links col-lg d-flex align-items-center justify-content-center"><a class="logo" href="index.html">D</a>
+          <ul class="list-unstyled text-uppercase mt-3 d-flex">
+            <li class="d-inline-block"><a href="clothes.html">Clothes</a></li>
+            <li class="d-inline-block"><a href="footwear.html">Footwear</a></li>
+            <li class="d-inline-block"><a href="accessories.html">Accessories</a></li>
+          </ul>
+        </div><span class="col text-lg-end text-center mt-3 mt-lg-0">&copy; 2021 Deuce Store. All right reserved.        </span>
+      </div>
+    </div>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="js/libs/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

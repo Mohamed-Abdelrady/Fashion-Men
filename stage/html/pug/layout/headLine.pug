@@ -1,0 +1,35 @@
+.headLine
+    - if (pageTitle == 'Homepage')
+        .container
+            .d-none.d-lg-block
+                .description
+                    h2.display-1 W Slim Fit”
+                    h3.display-3 T-Shirt L
+                    p.my-4 The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything .
+                    a(href="#")
+                        |Explore
+                        i.fas.fa-arrow-right
+                .ware.my-5.d-flex.flex-wrap 
+                    img(src="img/homepage/headline/1.jpg")
+                    .text
+                        h6.mb-1 Summer T-Shirt
+                        p.m-0 Product Code: U6186AZWT34
+                        span $49.99
+                    img(src="img/homepage/headline/2.jpg")
+                    img(src="img/homepage/headline/3.jpg")
+        .slider.d-block.d-lg-none
+            +coverSlider(homepageCover, "homepage")
+            p.display-1.home Welcome To Deuce Fashion Store For Men
+    - else
+        .slider
+            - if (pageTitle == 'Clothes') 
+                +coverSlider(clothesCover, "clothes")
+            
+            - if (pageTitle == 'Footwear') 
+                +coverSlider(footwearCover, "footwear")
+
+            
+            - if (pageTitle == 'Accessories') 
+                +coverSlider(accessoriesCover, "accessories")
+            
+            p.display-1= pageTitle

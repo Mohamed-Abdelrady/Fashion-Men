@@ -1,0 +1,81 @@
+.headLine {
+  position: relative;
+  overflow: hidden;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-up(lg) {
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 60%;
+      background-color: $bgColor;
+      top: -10px;
+      right: 0;
+      z-index: -1;
+      background-image: url(../img/homepage/headline/cover.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .description {
+    h2 {
+      @extend %mainHeader;
+      font-size: 6.4rem;
+    }
+    h3 {
+      @extend %secHeader;
+      font-size: 5rem;
+      margin-top: -30px;
+    }
+    p {
+      @extend %paragraph;
+      width: 35%;
+    }
+    a {
+      text-transform: uppercase;
+      color: $mainHeaderColor;
+      align-items: center;
+      text-decoration: none;
+      svg {
+        margin-left: 5px;
+        font-size: 15px;
+        color: $mainHeaderColor;
+      }
+    }
+  }
+  .ware {
+    width: 250px;
+    height: 270px;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    img {
+      width: 120px;
+      height: 130px;
+    }
+    .text {
+      width: 120px;
+      h6 {
+        font-weight: 700;
+        color: $mainHeaderColor;
+      }
+      p {
+        color: $pColor;
+        line-height: 1.2;
+      }
+      span {
+        color: $mainHeaderColor;
+        margin-top: 6px;
+        display: inline-block;
+        border-bottom: 1px solid $mainHeaderColor;
+        padding-bottom: 2px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+  }
+}

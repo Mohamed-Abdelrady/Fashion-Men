@@ -1,0 +1,88 @@
+.footer {
+  margin-top: 40px;
+  .subscripe {
+    background-color: $bgColor;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 10px;
+    border-radius: 20px 20px 0 0;
+    h2 {
+      @extend %secHeader;
+      color: $mainHeaderColor;
+      @include media-breakpoint-down(md) {
+        font-size: 2.4rem;
+      }
+    }
+    p {
+      @extend %paragraph;
+      font-style: italic;
+    }
+    div {
+      border: 0;
+    }
+    input {
+      border: 0;
+      border-radius: 20px;
+      padding: 10px 30px;
+      background-color: $mainHeaderColor;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        border-radius: 20px !important;
+        display: block;
+        margin: 0 auto;
+      }
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    button {
+      @extend input;
+      font-weight: 700;
+      @include media-breakpoint-down(sm) {
+        margin: 10px auto 0 !important;
+      }
+    }
+  }
+  .border-footer {
+    content: '';
+    height: 15px;
+    background-color: $mainHeaderColor;
+    margin: 0;
+    border-radius: 6px;
+  }
+  .bottom {
+    background-color: $bgColor;
+    padding: 20px 20px 10px;
+    color: $navbarLinksColor;
+    @include media-breakpoint-down(sm) {
+      padding: {
+        right: 0;
+        left: 0;
+      }
+    }
+    .logo {
+      @extend %logo;
+      @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: $navbarLinksColor;
+      margin: 0 5px;
+      font-weight: 400;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+    span {
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+}

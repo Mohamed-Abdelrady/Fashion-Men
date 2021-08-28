@@ -1,0 +1,7 @@
+//-SideBar mixin
+mixin sideBar(categories)
+    ul.category.list-unstyled
+        each category in categories
+            - var i=0;
+                li= category[i]
+                    span (#{category[i+1]})

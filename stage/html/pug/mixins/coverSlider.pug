@@ -1,0 +1,7 @@
+//-slider mixin
+mixin coverSlider(covers, folder)
+    #carouselExampleSlidesOnly.carousel.slide(data-bs-ride="carousel")
+        .carousel-inner
+            each cover in covers
+                .carousel-item(class=`${cover == covers.first ? "active" : ""}`)
+                    .image.w-100.d-block(style=`background-image: url(img/slider/${folder}/${cover}.jpg)`)

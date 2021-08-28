@@ -1,0 +1,23 @@
+- var pageTitle = "Accessories"
+include pug/varriables/slider
+include pug/varriables/sidebarCategory
+include pug/varriables/products/accessories
+include pug/mixins/coverSlider
+include pug/mixins/productBox
+include pug/mixins/sideBar
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        include pug/components/navbar
+        include pug/layout/headLine
+        .content.container-lg-fluid.container
+            .row 
+                .col-md-3.col-3.d-lg-block.d-none
+                    include pug/layout/sidebar
+                .col
+                    +productBox(accessories)
+        include pug/layout/footer
+        include pug/structure/scripts

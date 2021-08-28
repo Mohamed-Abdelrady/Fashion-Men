@@ -1,0 +1,32 @@
+.slider {
+  margin: 0 0 20px;
+  position: relative;
+    overflow: hidden;
+  .image {
+    height: 400px;
+    background-position: top right;
+    background-size: 100% 400px;
+  }
+  p {
+    position: absolute;
+    left: 8%;
+    top: calc(50% - 70px);
+    @extend %mainHeader;
+    font-style: italic;
+    z-index: 22;
+    padding: 0 12px 11px;
+    background-color: rgba($bgColor, 0.6);
+    @include media-breakpoint-down(sm) {
+      left: 2%;
+    }    
+    &.home {
+      width: 90%;
+      left: 1%;
+      top: calc(50% - 104px);
+      @include media-breakpoint-down(sm) {
+        top: calc(50% - 6rem);
+        font-size: 3rem;
+      }
+    }
+  }
+}

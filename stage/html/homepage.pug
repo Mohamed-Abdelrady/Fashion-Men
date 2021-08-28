@@ -1,0 +1,18 @@
+- var pageTitle = "Homepage"
+include pug/varriables/slider
+include pug/varriables/shopBox
+include pug/varriables/brands
+include pug/mixins/coverSlider
+include pug/mixins/shopBox
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        include pug/components/navbar
+        include pug/layout/headLine
+        +homeShops(shops)
+        include pug/layout/brands
+        include pug/layout/footer
+        include pug/structure/scripts

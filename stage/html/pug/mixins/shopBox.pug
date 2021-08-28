@@ -1,0 +1,17 @@
+//-shop layout mixin
+mixin homeShops (shops)
+    each shop in shops
+        .shop.text-uppercase
+            .container-fluid
+                .row(style=`${top == 1 ? "margin-top: -6%" : ""}`) 
+                    - var i = `${ i == 0 ? 1 : 0}`
+                    .col-md.mb-md-0.mb-1.first(style=`order:${i}`)
+                        .image(class=shop.title.toLowerCase())
+                            img.w-100(src=shop.link)
+                    .col.align-self-center(class=`${i == 1 ? "text-end" : ""}` style=`${top != 1 ? "margin-top: -6%" : ""}`)
+                        h2.m-0.display-1 shop
+                        h3.display-1.mb-4= shop.title
+                        if shop.discount !== '' && shop.discount != undefined
+                            span.d-block.text-capitalize.mb-4 Extra sales to collection - up to #{shop.discount}!!!
+                        a.text-uppercase(href=shop.title.toLowerCase() + '.html') shop now
+            - var top = 1

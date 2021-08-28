@@ -1,0 +1,117 @@
+.sideBar {
+  border: 1px solid $bgColor;
+  padding: 30px 20px;
+  form {
+    border: 1px solid $bgColor;
+    padding: 9px 5px;
+    > div {
+      align-items: center;
+      input {
+        color: $pColor;
+        text-indent: 5px;
+        border-right: 1px solid $bgColor !important;
+        &:focus {
+          box-shadow: none;
+          color: $pColor;
+        }
+      }
+      svg {
+        color: $pColor;
+        margin-left: 5px;
+      }
+    }
+  }
+  h5 {
+    @extend %secHeader;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 2px solid $bgColor;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 2px;
+      width: 40%;
+      background-color: $mainHeaderColor;
+    }
+  }
+  .category {
+    li {
+      @extend %productHeader;
+      font-size: 1rem;
+      position: relative;
+      margin-left: 35px;
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -35px;
+        height: 3px;
+        width: 20px;
+        background-color: $bgColor;
+      }
+      span {
+        margin-left: 5px;
+        color: $pColor;
+      }
+    }
+  }
+  .price-slider {
+    height: 5px;
+    #slider-range {
+      border: 0;
+      height: 100%;
+      background-color: $mainHeaderColor;
+      .ui-slider-handle {
+        background-color: $pColor;
+        border-radius: 50%;
+        top: -7px;
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+      .ui-state-default,
+      .ui-state-active {
+        border: 0;
+      }
+    }
+  }
+  .desc {
+    text-align: center;
+    p {
+      margin: 30px auto;
+      font-size: larger;
+      span {
+        font-size: smaller;
+        font-weight: bolder;
+      }
+    }
+    a {
+      @extend %button;
+      width: 60%;
+    }
+  }
+  .product {
+    line-height: 1.2rem;
+    align-items: center;
+    h6 {
+      @extend %productHeader;
+      font-size: 1rem;
+    }
+    span {
+      @extend %productHeader;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}

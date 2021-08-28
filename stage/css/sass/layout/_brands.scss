@@ -1,0 +1,12 @@
+.brands {
+  margin-top: 30px;
+  padding: 20px 0;
+  h2 {
+    @extend %mainHeader;
+    margin-bottom: 44px;
+  }
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+}
